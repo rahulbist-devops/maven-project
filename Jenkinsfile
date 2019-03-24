@@ -5,7 +5,7 @@ pipeline{
      steps {
          sh 'mvn clean package'
          // archiveArtifacts artifacts: '/var/lib/jenkins/workspace/maven-project/artifacts/abc.war'
-        archiveArtifacts artifacts: '${env.BUILD_ID}.jar'
+        archiveArtifacts artifacts: '**/target/*.war'
      } 
 
     }
